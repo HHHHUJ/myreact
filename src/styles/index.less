@@ -1,0 +1,132 @@
+@import "common/mobile.less";
+
+@import "common/transition.less";
+
+@import "common/swiper-3.3.1.min.css";
+
+@import "common/layer.css";
+
+@import "../assets/iconfont/iconfont.css";
+
+@import "page/head";
+
+@import "page/home";
+
+@import "page/mine";
+
+@import "page/distance";
+
+@import "page/search";
+
+@import "page/layout";
+
+@import "page/login";
+
+@import "page/travel";
+
+@import "page/addetails";
+
+@import "page/personal";
+
+@import "page/create";
+//*{ touch-action:none;} 
+html,body,.layout,#app{
+    height:100%;
+    width:100%;
+}
+html,body{
+ overflow:hidden;overflow-y:auto;//禁止横向滚动条
+ width:100%;
+ box-sizing: border-box;
+}
+
+//横向局部滑动
+
+// body::-webkit-scrollbar { display: none }
+.imgList{
+  height:270px;
+  margin-top:8px;
+  width:100%;
+  display: -webkit-box;
+  overflow: hidden;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling:touch;
+  img{
+      display:block;
+      width:478px;
+      height:270px;
+      margin-right:8px;
+  }
+}
+.slipping{
+  display: -webkit-box;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling:touch;
+}
+.head1box{
+  width:100%;
+  height:165px;
+  .head1{
+    height:165px;
+    width:100%;
+    background:#2bc9d5;
+    line-height:165px;
+    position:fixed;
+    top:0px;
+    left:0px;
+    i{
+        display:inline-block;
+        width:163px;
+        height:165px;
+        font-size:48px;
+        text-align: center;
+        line-height: 165px;
+        color:#fff;
+    }
+    span{
+        font-size:55px;
+        color:#fff;
+    }
+}
+}
+
+
+
+.react-container{
+  width:100%;
+}
+//新组件
+.slide-in-appear {
+    transform: translate3D(100%, 0, 0);
+    transition: all 500ms linear;
+  
+    &.slide-in-appear-active {
+      transform: translate3D(0, 0, 0);
+    }
+  }
+  
+  .slide-in-enter {
+    transform: translate3D(100%, 0, 0);
+    transition: all 500ms linear;
+  
+    &.slide-in-enter-active {
+      transform: translate3D(0, 0, 0);
+    }
+  }
+  
+//   向左滑出   老组件
+  .slide-in-leave {
+    position: absolute;
+    left: 0;
+    top: 340px;
+    opacity:0 !important;
+    transform: translate3D(0, 0, 0);
+    transition: all 0ms linear;
+  
+    &.slide-in-leave-active {
+      opacity: 0 !important;
+      transform: translate3D(-100%, 0, 0);
+    }
+  }
+
+
